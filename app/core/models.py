@@ -3,6 +3,9 @@ from django.db import models
 # Create your models here.
 
 CATEGORIA_CHOICES = (
+    ('Expediente','Expediente'),
+    ('Mercearia','Mercearia'),
+    ('Bebidas','Bebidas'),
     ('Alimento Não Perecível', 'Alimento Não Perecível'),
     ('Remédio', 'Remédio'),
     ('Protetor Solar', 'Protetor Solar')

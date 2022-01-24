@@ -10,7 +10,7 @@
       <div class="table-title" id="round-top">
           <div class="row mt-3">
             <div class="col-sm-12">
-                <a class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar novo pedido</span></a> <h2>Pedidos</h2> 
+                <a href="{% url 'ProcuraCliente' %}" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar novo pedido</span></a> <h2>Pedidos</h2> 
             </div>
           </div>
       </div>
@@ -30,15 +30,12 @@
               <td class="text-center">{{ pedido.idCliente }}</td>
               <td class="text-center">{{ pedido.data }}</td>
               <td class="text-center icons-td">
-                <a class="details">
+                <a href="{% url 'PedidoDetalhes' pedido.pk %}" class="details">
                   <span class="material-icons">
                     visibility
                   </span>
                 </a>
-                <a class="edit" data-toggle="modal">
-                  <i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i>
-                </a>
-                <a class="delete" data-toggle="modal">
+                <a href="{% url 'PedidoExcluir' pedido.pk %}" class="delete">
                   <i class="material-icons" data-toggle="tooltip" title="Excluir">&#xE872;</i>
                 </a>               
               </td>
