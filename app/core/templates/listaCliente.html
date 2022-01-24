@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+  {% block content %} {% block styles %} 
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/listas/listas.css' %}">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  {% endblock %}
+
+  <div class="col">
+    <div class="table-wrapper" id="round">
+      <div class="table-title" id="round-top">
+          <div class="row mt-3">
+            <div class="col-sm-12">
+                <a class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar novo cliente</span></a> <h2>Clientes</h2> 
+            </div>
+          </div>
+      </div>
+      <table class="table table-striped table-hover table-responsive-sm text-justify">
+        <thead>
+            <tr>
+              <th class="text-center">ID</th>
+              <th class="text-center">Nome</th>
+              <th class="text-center">CPF</th>
+              <th class="text-center">Email</th>
+              <th class="text-center">Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for cliente in cliente_list %}
+            <tr>
+              <td class="text-center">{{ cliente.pk }}</td>
+              <td class="text-center">{{ cliente.nome }}</td>
+              <td class="text-center">{{ cliente.cpf }}</td>
+              <td class="text-center">{{ cliente.email }}</td>
+              <td class="text-center icons-td">
+                <a class="details">
+                  <span class="material-icons">
+                    visibility
+                  </span>
+                </a>
+                <a class="edit" data-toggle="modal">
+                  <i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i>
+                </a>
+                <a class="delete" data-toggle="modal">
+                  <i class="material-icons" data-toggle="tooltip" title="Excluir">&#xE872;</i>
+                </a>               
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+    </div>
+  </div>  
+{% endblock %}
