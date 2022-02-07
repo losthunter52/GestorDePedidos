@@ -10,7 +10,7 @@
       <div class="table-title" id="round-top">
           <div class="row mt-3">
             <div class="col-sm-12">
-                <a href="{% url 'ClienteCadastro' %}" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar novo cliente</span></a> <h2>Clientes</h2> 
+              {% if user.is_authenticated %}<a href="{% url 'ClienteCadastro' %}" class="btn btn-success"><i class="material-icons">&#xE147;</i> <span>Adicionar novo cliente</span></a>{% endif %}  <h2>Clientes</h2> 
             </div>
           </div>
       </div>
@@ -37,12 +37,14 @@
                     visibility
                   </span>
                 </a>
+                {% if user.is_authenticated %}
                 <a href="{% url 'ClienteEditar' cliente.pk %}" class="edit">
                   <i class="material-icons" data-toggle="tooltip" title="Editar">&#xE254;</i>
                 </a>
                 <a href="{% url 'ClienteExcluir' cliente.pk %}" class="delete">
                   <i class="material-icons" data-toggle="tooltip" title="Excluir">&#xE872;</i>
-                </a>               
+                </a> 
+                {% endif %}               
               </td>
             </tr>
             {% endfor %}

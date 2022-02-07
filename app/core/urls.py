@@ -6,6 +6,7 @@ urlpatterns = [
     path('home/', views.index, name='home'),
 ]
 
+
 #Cliente
 urlpatterns += [
     path('cliente/', views.listaCliente.as_view(), name='Cliente'),
@@ -31,3 +32,4 @@ urlpatterns += [
     path('pedido/<int:pk>', views.detalhesPedido, name='PedidoDetalhes'),
     path('pedido/delete<int:pk>', views.excluirPedido, name='PedidoExcluir'),
 ]
+
