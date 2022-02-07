@@ -21,7 +21,7 @@
                         Você quer mesmo deletar {{ object }}?
                     </div>
                 </div>
-                {% if user.is_authenticated %}
+                {% if user.is_staff %}
                 <button type="submit" class="btn btn-danger">
                     <span class="glyphicon glyphicon-trash">Sim</span>
                 </button>
