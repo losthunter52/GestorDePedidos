@@ -7,7 +7,7 @@
 <p></p>
 <p></p>
 <h1 align="center">
-  <img alt="Diagrama" title="#Diagrama" src="./astaticfiles/diagrama.png" />
+  <img alt="Diagrama" title="#Diagrama" src="./staticfiles/diagrama.png" />
 </h1>
 <p></p>
 <p></p>
