@@ -7,7 +7,7 @@
 <p></p>
 <p></p>
 <h1 align="center">
-  <img alt="NextLevelWeek" title="#Diagrama" src="./astaticfiles/diagrama.png" />
+  <img alt="Diagrama" title="#Diagrama" src="./astaticfiles/diagrama.png" />
 </h1>
 <p></p>
 <p></p>
