@@ -1,5 +1,5 @@
 from django.urls import path
-from core import views
+from . import views
 
 #Generic
 urlpatterns = [
@@ -32,4 +32,3 @@ urlpatterns += [
     path('pedido/<int:pk>', views.detalhesPedido, name='PedidoDetalhes'),
     path('pedido/delete<int:pk>', views.excluirPedido, name='PedidoExcluir'),
 ]
-

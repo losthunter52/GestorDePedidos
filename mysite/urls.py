@@ -1,4 +1,4 @@
-"""app URL Configuration
+"""mysite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.0/topics/http/urls/
@@ -26,10 +26,9 @@ urlpatterns = [
     path('', RedirectView.as_view(url='home/')),
 ]
 
-
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 urlpatterns += [
-    path('', include('core.urls')),
+    path('', include('gestordepedidos.urls')),
     path('accounts/', include('django.contrib.auth.urls')),
 ]

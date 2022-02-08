@@ -1,7 +1,7 @@
 from django.forms import inlineformset_factory
 from django.shortcuts import render, redirect, get_object_or_404
-from core.models import *
-from core.forms import *
+from .models import *
+from .forms import *
 from django.views.generic import ListView, DetailView
 
 # Generico

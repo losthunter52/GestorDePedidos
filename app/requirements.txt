@@ -1,8 +1,0 @@
-dj-database-url
-django
-django-widget-tweaks
-django-bootstrap-form
-gunicorn
-psycopg2-binary
-wheel
-whitenoise
